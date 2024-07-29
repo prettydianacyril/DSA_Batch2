@@ -1,0 +1,22 @@
+Find the Largest Element
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+  int n;
+  double *data;
+  printf("Enter the total number of elements: ");
+  scanf("%d", &n);
+
+  
+
+
+  printf("Largest number = %.2lf", *data);
+
+  free(data);
+
+  return 0;
+}

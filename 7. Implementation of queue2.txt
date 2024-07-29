@@ -1,0 +1,64 @@
+//C program to reverse the elements of a queue.
+/*Expected Output:
+
+Queue elements are:
+1 2 3 4 5
+Reverse Queue, elements are:
+5 4 3 2 1
+Add two elements to the said queue:
+Queue elements are:
+5 4 3 2 1 100 200
+Reverse Queue, elements are:
+200 100 1 2 3 4 5 */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX_SIZE 100
+
+// Define a structure for the queue
+typedef struct {
+    int items[MAX_SIZE]; // Array to store elements of the queue
+    int front; // Index of the front element
+    int rear; // Index of the rear element
+} Queue;
+
+
+// Main function to test the program
+int main() {
+    Queue* q = createQueue(); // Create an empty queue
+
+    // Add elements to the queue
+    enqueue(q, 1);
+    enqueue(q, 2);
+    enqueue(q, 3);
+    enqueue(q, 4);
+    enqueue(q, 5);
+
+    // Display the elements in the queue
+    printf("Queue elements are:\n");
+    display(q);
+
+    // Reverse the elements in the queue
+    printf("Reverse Queue, elements are:\n");
+    reverse_queue(q);
+
+    // Display the elements in the reversed queue
+    display(q);
+
+    // Add two elements to the queue
+    enqueue(q, 100);
+    enqueue(q, 200);
+
+    printf("Add two elements to the said queue:\n");    
+    printf("Queue elements are:\n");
+    display(q);
+
+    // Reverse the elements in the queue
+    printf("Reverse Queue, elements are:\n");
+    reverse_queue(q);
+    display(q);
+
+    return 0; // Return from the main function
+}
+

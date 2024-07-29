@@ -1,0 +1,37 @@
+// C program to convert a decimal number to its binary equivalent using stack.
+
+Expected Output:
+
+Input a decimal number: 10
+The binary equivalent is: 1010
+Input a decimal number: 109
+Binary equivalent of the said number is: 1101101
+
+Input a decimal number: 2015
+Binary equivalent of the said number is: 11111011111
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAX_SIZE 100
+
+struct Stack {
+    int top; 
+    int array[MAX_SIZE]; 
+};
+
+// Initialize a new stack
+struct Stack* newStack() {
+    struct Stack* stack = (struct Stack*) malloc(sizeof(struct Stack)); // Allocate memory for the stack
+    stack->top = -1; // Set the top index to -1 (empty stack)
+    return stack;
+}
+
+
+int main() {
+    int dec_no;
+    printf("Input a decimal number: ");
+    scanf("%d", &dec_no); // Read a decimal number from the user
+    decimal_to_binary(dec_no); // Convert the decimal number to binary
+    return 0;
+}

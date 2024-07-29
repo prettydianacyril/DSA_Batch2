@@ -1,0 +1,16 @@
+//Program to add two distances in the inch-feet system
+
+#include <stdio.h>
+
+struct Distance {
+   int feet;
+   float inch;
+} d1, d2, result;
+
+int main() 
+   {
+  
+   }
+   printf("\nSum of distances = %d\'-%.1f\"", result.feet, result.inch);
+   return 0;
+}
